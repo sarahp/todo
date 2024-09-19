@@ -1,10 +1,8 @@
 import axios from "axios";
 
-// Use environment variables with a fallback in case they are not defined
 const API_BASE_URL = process.env.REACT_APP_TODO_API || 'https://jsonplaceholder.typicode.com/todos';
-const itemsPerPage = process.env.REACT_APP_ITEMS_PER_PAGE || 20;
+const itemsPerPage = process.env.REACT_APP_ITEMS_PER_PAGE || 13;
 
-// Create an Axios instance with default configuration
 const api = axios.create({
     baseURL: API_BASE_URL,
     timeout: 10000,
@@ -13,8 +11,6 @@ const api = axios.create({
     },
 });
 
-
-// Fetch todos with custom pagination parameters
 export const getTodos = async (limit: number, page: number) => {
     try {
         const response = await api.get('', {

@@ -8,7 +8,7 @@ A simple Todo App built with React, TypeScript, and Axios, which fetches data fr
 - **React** and **TypeScript**: Ensures a strongly typed application with reusable components.
 - **Axios**: Handles HTTP requests to fetch todo data from the JSONPlaceholder API.
 - **Recoil**: Manages the global state of todos, loading, error, and pagination.
-- **Pagination**: View the todos in chunks of configurable sizes (10-40 rows).
+- **Pagination**: View the todos in pages
 - **Responsive Design**: Works well on mobile and desktop screens.
 - **Error Handling**: Gracefully handles API errors and loading states.
 
@@ -23,12 +23,7 @@ Follow these instructions to get the project up and running on your local machin
 
 ### Installation
 
-1. Clone the repository:
-
-   \`\`\`bash
-   git clone https://github.com/your-username/todo-app.git
-   cd todo-app
-   \`\`\`
+1. Clone the repository
 
 2. Install the dependencies:
 
@@ -50,14 +45,6 @@ Follow these instructions to get the project up and running on your local machin
 
 5. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 
-### Running Tests
-
-To run the tests (if you have set up testing), use the following command:
-
-\`\`\`bash
-npm test
-\`\`\`
-
 ## Recoil - State Management
 
 This application uses **Recoil** for state management, which is a modern and efficient state management library for React applications. Recoil allows for a fine-grained reactive state model where state is shared across components with minimal boilerplate.
@@ -72,24 +59,6 @@ To learn more about Recoil, visit the official documentation:
 
 - [Recoil GitHub Repository](https://github.com/facebookexperimental/Recoil)
 - [Recoil Documentation](https://recoiljs.org/)
-
-## File Structure
-
-\`\`\`bash
-.
-├── src/
-│   ├── components/
-│   │   ├── TodoTable.tsx       # Main component to display todo items
-│   ├── recoil/
-│   │   ├── atoms.ts            # Recoil atoms for managing global state
-│   │   ├── types.ts            # TypeScript types
-│   ├── services/
-│   │   ├── api.ts              # Axios service to fetch todos
-├── .env                        # Environment variables
-├── package.json
-├── README.md                   # Project documentation
-└── tsconfig.json               # TypeScript configuration
-\`\`\`
 
 ## Built With
 

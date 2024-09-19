@@ -23,5 +23,5 @@ export const currentPageState = atom<number>({
 
 export const perPageState = atom<number>({
   key: 'perPageState',
-  default: 10,
+  default: 13,
 });
