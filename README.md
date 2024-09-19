@@ -1,46 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Todo App
 
-## Available Scripts
+A simple Todo App built with React, TypeScript, and Axios, which fetches data from the JSONPlaceholder API and displays it in a paginated table. The app is designed to be responsive, mobile-friendly, and handles error and loading states gracefully. It uses **Recoil** for state management to provide an efficient and scalable way to manage application state.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **React** and **TypeScript**: Ensures a strongly typed application with reusable components.
+- **Axios**: Handles HTTP requests to fetch todo data from the JSONPlaceholder API.
+- **Recoil**: Manages the global state of todos, loading, error, and pagination.
+- **Pagination**: View the todos in chunks of configurable sizes (10-40 rows).
+- **Responsive Design**: Works well on mobile and desktop screens.
+- **Error Handling**: Gracefully handles API errors and loading states.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Follow these instructions to get the project up and running on your local machine.
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v12.x or later)
+- npm (v6.x or later)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   \`\`\`bash
+   git clone https://github.com/your-username/todo-app.git
+   cd todo-app
+   \`\`\`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install the dependencies:
 
-### `npm run eject`
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Create a `.env` file in the root of the project and add the following:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   \`\`\`bash
+   REACT_APP_TODO_API=https://jsonplaceholder.typicode.com/todos
+   \`\`\`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Start the development server:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   \`\`\`bash
+   npm start
+   \`\`\`
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running Tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run the tests (if you have set up testing), use the following command:
+
+\`\`\`bash
+npm test
+\`\`\`
+
+## Recoil - State Management
+
+This application uses **Recoil** for state management, which is a modern and efficient state management library for React applications. Recoil allows for a fine-grained reactive state model where state is shared across components with minimal boilerplate.
+
+Recoil atoms store the state, while selectors compute derived state and offer flexibility to handle more complex logic in a scalable way. In this Todo App, Recoil atoms are used to manage:
+
+- The list of todos
+- Loading and error states
+- Pagination details like current page and items per page
+
+To learn more about Recoil, visit the official documentation:
+
+- [Recoil GitHub Repository](https://github.com/facebookexperimental/Recoil)
+- [Recoil Documentation](https://recoiljs.org/)
+
+## File Structure
+
+\`\`\`bash
+.
+├── src/
+│   ├── components/
+│   │   ├── TodoTable.tsx       # Main component to display todo items
+│   ├── recoil/
+│   │   ├── atoms.ts            # Recoil atoms for managing global state
+│   │   ├── types.ts            # TypeScript types
+│   ├── services/
+│   │   ├── api.ts              # Axios service to fetch todos
+├── .env                        # Environment variables
+├── package.json
+├── README.md                   # Project documentation
+└── tsconfig.json               # TypeScript configuration
+\`\`\`
+
+## Built With
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript at Any Scale.
+- [Axios](https://axios-http.com/) - Promise based HTTP client for the browser and Node.js.
+- [Recoil](https://recoiljs.org/) - State management library for React.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
