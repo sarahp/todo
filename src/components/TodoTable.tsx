@@ -1,10 +1,11 @@
 import React, { useEffect} from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { todoState, 
          loadingState, 
          errorState, 
          currentPageState, 
          perPageState } from "../recoil/atoms";
+import { TodoItem } from "../recoil/types";
 import api, { getTodos } from "../services/api";
 
 const TodoTable: React.FC = () => {
@@ -19,11 +20,11 @@ const TodoTable: React.FC = () => {
             setLoading(true);
             try {
                 const data = await getTodos(perPage, currentPage);
-                setTodos(data as never[]);
+                setTodos(data as TodoItem[]);
             } catch (error: any) {
                 setError(error.message);
             } finally {
-                setLoading(false as never);
+                setLoading(loading);
             }
         };
 

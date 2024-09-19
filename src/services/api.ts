@@ -25,13 +25,13 @@ export const getTodos = async (limit: number, page: number) => {
     }
 };
 
-export const createTodo = async (todo: any) => {
-    try {
-        const response = await api.post('', todo);
-        return response.data;
-    } catch (error: any) {
-        throw new Error(`Error creating todo: ${error.response?.statusText || error.message}`);
-    }
-};
+// export const createTodo = async (todo: any) => {
+//     try {
+//         const response = await api.post('', todo);
+//         return response.data;
+//     } catch (error: any) {
+//         throw new Error(`Error creating todo: ${error.response?.statusText || error.message}`);
+//     }
+// };
 
 export default api;

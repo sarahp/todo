@@ -1,7 +1,7 @@
 import { atom } from 'recoil';
 
 // Define the shape of a todo item
-interface TodoItem {
+export interface TodoItem {
   userId: number;
   id: number;
   title: string;
